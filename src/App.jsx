@@ -3,6 +3,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from './pages/Login'
+import Upload from "./pages/Upload";
+import Records from "./pages/Records";
+import {  AuthProvider } from "./contexts/authContext";
 
 const router = createBrowserRouter([
   {
@@ -13,13 +16,22 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login/>,
   },
+  {
+    path: "/upload",
+    element: <Upload/>,
+  },
+  {
+    path: "/records",
+    element: <Records/>,
+  },
 ]);
 
 function App() {
-
   return (
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </AuthProvider>
   )
 }
 
