@@ -71,7 +71,7 @@ function Login() {
               className="h-10 rounded-md w-full bg-black text-gray-50 hover:bg-gray-900 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90"
               type="submit"
             >
-              Sign in
+              Login
             </button>
           </div>
         </form>
