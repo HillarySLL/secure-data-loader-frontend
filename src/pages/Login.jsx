@@ -1,18 +1,20 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import { useAuth } from '../contexts/authContext';
 import Wrapper from '../components/Wrapper';
 
 function Login() {
   const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    console.log(email, password);
     try {
       await login(email, password);
+      navigate("/upload");
     } catch (error) {
       console.log(error);
     } 
