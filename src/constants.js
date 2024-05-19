@@ -1,2 +1,2 @@
-export const baseUrl = "http://localhost:5500";
+export const baseUrl = process.env["API_URL"];;
 export const tokenKey = "secure-data-loader-token";
