@@ -1,10 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import dotenv from 'dotenv';
 
 import Login from "./pages/Login";
 import Upload from "./pages/Upload";
 import Records from "./pages/Records";
+
+dotenv.config();
 
 function App() {
   return (
