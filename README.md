@@ -3,7 +3,7 @@
 ![Licencia](https://img.shields.io/badge/licencia-MIT-blue.svg)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-green.svg)
 
-`secure-data-loader` es el frontend de la aplicación Secure Data Loader que proporciona una interfaz de usuario para la autenticación, carga de archivos CSV y gestión de datos. Este frontend se comunica con el backend (secure-data-loader-api) para realizar operaciones CRUD y manejar archivos CSV.
+`secure-data-loader-fronted` es el frontend de la aplicación Secure Data Loader que proporciona una interfaz de usuario para la autenticación, carga de archivos CSV y gestión de datos. Este frontend se comunica con el backend (secure-data-loader-api) para realizar operaciones CRUD y manejar archivos CSV.
 
 ## Tabla de Contenidos
 
