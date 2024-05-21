@@ -56,13 +56,13 @@ function Upload() {
                 id="file"
                 type="file"
                 onChange={handleFileChange}
-                className="rounded-md file-input file-input-bordered file-input-sm w-full"
+                className="rounded-md file-input file-input-secondary file-input-bordered file-input-sm w-full"
               />
             </div>
           </div>
           <div className="flex items-center p-6">
             <button
-              className="h-10 rounded-md w-full btn btn-neutral text-gray-50 hover:bg-gray-900 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90"
+              className="btn btn-outline btn-secondary h-10 rounded-md w-full text-gray-50 dark:text-gray-900 "
               onClick={handleUpload}
               type="submit"
             >

@@ -22,7 +22,7 @@ function Login() {
   };
 
   return (
-    <div className='w-full flex h-screen items-center justify-center'>
+    <div className='w-full flex h-screen items-center justify-center bg-gray-100 dark:bg-gray-950'>
       <form
         className="w-3/12 rounded-lg border bg-card text-card-foreground shadow-sm"
         onSubmit={handleSubmit}

@@ -29,28 +29,26 @@ function Navbar() {
           Secure Data Loader
         </a>
       </div>
-      <div className="flex-none gap-2 mr-4">
-        <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-            <div className="bg-neutral text-neutral-content rounded-full w-14">
-              <div className="flex items-center justify-center h-full">
-                <span className="text-xl">HS</span>
+      {
+        isAuthenticated && (
+          <div className="flex-none gap-2 mr-4">
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                <div className="bg-neutral text-neutral-content rounded-full w-14">
+                  <div className="flex items-center justify-center h-full">
+                    <span className="text-xl">HS</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-            {isAuthenticated ? (
+              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                 <li onClick={handleLogout}>
                   <a>Logout</a>
                 </li>
-              ) : (
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-              )}
-          </ul>
-        </div>
-      </div>
+              </ul>
+            </div>
+          </div>
+        )
+      }
     </div>
   )
 }
