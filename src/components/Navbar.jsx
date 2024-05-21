@@ -3,6 +3,11 @@ import { useAuth } from '../contexts/authContext';
 
 function Navbar() {
   const { logout } = useAuth();
+  const { login} = useAuth();
+
+  const handleLogin = () => {
+    login();
+  };
 
   const handleLogout = () => {
     logout();
@@ -26,6 +31,7 @@ function Navbar() {
           >
             <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
           </svg>
+          Secure Data Loader
         </a>
       </div>
       <div className="flex-none gap-2 mr-4">
@@ -38,6 +44,9 @@ function Navbar() {
             </div>
           </div>
           <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+            <li onClick={handleLogin}>
+              <a>Login</a>
+            </li>
             <li onClick={handleLogout}>
               <a>Logout</a>
             </li>

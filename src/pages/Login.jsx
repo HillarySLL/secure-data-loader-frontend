@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/authContext';
 function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,6 +16,7 @@ function Login() {
       await login(email, password);
       navigate("/upload");
     } catch (error) {
+      setError("Invalid email or password");
       console.log(error);
     } 
   };
@@ -28,11 +30,12 @@ function Login() {
       >
         <div className="flex flex-col p-6 space-y-1 text-center">
           <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">
-            Sign in to your account
+            Login in to your account
           </h3>
           <p className="text-sm text-muted-foreground">
             Enter your email and password below to access your account.
           </p>
+          {error && <p className="text-sm text-error">{error}</p>}
         </div>
         <div className="p-6 space-y-4">
           <div className="grid gap-2">

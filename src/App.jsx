@@ -5,12 +5,14 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import Upload from "./pages/Upload";
 import Records from "./pages/Records";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/upload"
           element={
