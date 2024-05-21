@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 
 function Navbar() {
@@ -38,12 +39,15 @@ function Navbar() {
             </div>
           </div>
           <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-            <li>
-              <a href="/login">Login</a>
-            </li>
-            <li onClick={handleLogout}>
-              <a>Logout</a>
-            </li>
+            {isAuthenticated ? (
+                <li onClick={handleLogout}>
+                  <a>Logout</a>
+                </li>
+              ) : (
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              )}
           </ul>
         </div>
       </div>
