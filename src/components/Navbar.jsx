@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 
 function Navbar() {
-  const { logout } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
   const handleLogout = () => {
     logout();
   };
