@@ -1,11 +1,8 @@
 import React from 'react'
 import Container from '../components/Container'
-import Navbar from '../components/Navbar'
 
 function Home() {
   return (
-    <>
-      <Navbar />
       <Container>
       <div className="card w-96 bg-base-100 shadow-xl image-full">
         <figure><img src="https://www.365cons.com/images/icons/365cons_340.svg?2" alt="Laptop" /></figure>
@@ -18,8 +15,6 @@ function Home() {
         </div>
       </div>
       </Container>
-    </>
-    
   )
 }
 
